@@ -8,27 +8,16 @@ from textual.containers import Container, Horizontal
 
 
 WELCOM_MD = """\
-# pullback.oi Trader
+# Autoexit Trader
 
 If you're a driven trader that is ready to automate your strategies this trading bot will help to maximize your returns and free up your time. 
 
 ### Integration List 
-- **API Connectors**: To date Pullback connects to 3 APIs.
+- **API Connectors**: To-date Autoexit connects to 3 APIs.
     - Alpha Vantage - Stock Data
 """
 
 class WelcomeView(Screen[APIService]):
-    DEFAULT_CSS = """
-        Welcome #text {
-            margin:  0 1;
-        }
-        Welcome #system_container {
-            align: center bottom;
-        }
-        Welcome .btn {
-            margin: 0 1;
-        }
-    """
 
     def compose(self) -> ComposeResult:
         yield Container(Static(Markdown(WELCOM_MD), id="text"), id="md")

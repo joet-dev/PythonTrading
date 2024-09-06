@@ -1,18 +1,23 @@
 
-from textual.widgets import Button, Placeholder
+
+from widgets import TopBar
+
 from textual.screen import Screen
 from textual.app import ComposeResult
 from traders.service import APIService
-import secret as secret
-from traders.alphavantage import AlphaVantageService, AVFunction
-
-
+from textual.widgets import Footer
+from traders.alphavantage import AlphaVantageService
+from obj.config import AutoExitConfig
 
 class DashboardView(Screen):
-    def __init__(self, api_service:APIService): 
+    def __init__(self, config:AutoExitConfig) -> None: 
         super().__init__() 
-        if api_service == APIService.ALPHA_VANTAGE:
-            self.service = AlphaVantageService(secret.ALPHA_VANTAGE_API_KEY)
+    
+        self.config = config
+
+        if self.config.api_service == APIService.ALPHA_VANTAGE:
+            self.service = AlphaVantageService(self.config.api_key)
 
     def compose(self) -> ComposeResult:
-        yield Placeholder("Dashboard Screen")
+        yield TopBar(self.config.package_name, self.config.version, self.config.api_service.value, "click [bold red]?[/bold red] for help")
+        yield Footer()

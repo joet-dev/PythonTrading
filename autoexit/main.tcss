@@ -1,0 +1,39 @@
+WelcomeView #text {
+    margin:  0 1;
+}
+
+WelcomeView #system_container {
+    align: center bottom;
+}
+
+WelcomeView .btn {
+    margin: 0 1;
+}
+
+WelcomeView {
+    padding: 5;
+}
+
+TopBar {
+    dock: top;
+    height: 1;
+    layout: horizontal;
+    background: #0d1117;
+}
+
+
+#topbar-left {
+    width: 15%;
+    content-align: left middle;
+}
+#topbar-middle {
+    color: #bbc8e8;
+    width: 70%;
+    content-align: center middle;
+    text-style: bold;
+}
+#topbar-right {
+    width: 15%;
+    content-align: right middle;
+    color: #8f9fc1;
+}

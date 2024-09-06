@@ -1,5 +1,5 @@
 from enum import Enum
 
 class APIService(Enum): 
-    ALPHA_VANTAGE = 0
-    POLYGON = 1
+    ALPHA_VANTAGE = 'alpha_vantage'
+    POLYGON = 'polygon'

@@ -7,7 +7,7 @@ import pandas as pd
 import requests
 import xlsxwriter
 import math 
-from secret import POLYGON_API_KEY
+from src.secret import POLYGON_API_KEY
 import datetime
 import plotly.graph_objects as grphObj
 from plotly.subplots import make_subplots

@@ -2,3 +2,4 @@ secret.py
 json.json
 venv
 __pycache__
+__temp__

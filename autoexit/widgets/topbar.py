@@ -6,7 +6,7 @@ class TopBar(Container):
     def __init__(self, app_name:str="unknown", app_version:str="", system:str="", help:str=""):
         super().__init__()
 
-        self.left = Label(f"{app_name} {app_version}", id="topbar-left")
+        self.left = Label(f"{app_name} v{app_version}", id="topbar-left")
         self.middle = Label(system, id="topbar-middle")
         self.right = Label(help, id="topbar-right")
         

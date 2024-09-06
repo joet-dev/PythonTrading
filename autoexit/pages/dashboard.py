@@ -12,7 +12,7 @@ from obj.config import AutoExitConfig
 class DashboardView(Screen):
     def __init__(self, config:AutoExitConfig) -> None: 
         super().__init__() 
-    
+
         self.config = config
 
         if self.config.api_service == APIService.ALPHA_VANTAGE:

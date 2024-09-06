@@ -1,11 +1,11 @@
-from textual.app import App
-from pages import WelcomeView, DashboardView
-import secret as secret
-from textual import work
 from importlib import metadata
-from obj.config import AutoExitConfig
-from rich.theme import Theme
 
+import secret as secret
+from obj.config import AutoExitConfig
+from pages import DashboardView, WelcomeView
+from rich.theme import Theme
+from textual import work
+from textual.app import App
 
 try:
     __package_name__ = metadata.metadata('autoexit')["Name"]
